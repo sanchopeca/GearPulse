@@ -75,10 +75,6 @@ Daily cron (GitHub Actions) ──▶ python scraper.py ──▶ Scrape 3 categ
 - **Notifications:** Telegram Bot API
 - **Automation:** GitHub Actions (daily cron + manual dispatch)
 
-## Disclaimer
-
-This project was built with the assistance of AI tools (Claude Code by Anthropic).
-
 ## License
 
 For educational and personal use. Please respect terms of service of the monitored websites.
