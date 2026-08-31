@@ -105,7 +105,11 @@ async def scrape_page(category, page, captured_ads, seen_ad_ids, retries=3):
                 return
 
     ad_selector = "[class*='AdItem_adOuterHolder']"
-    await page.wait_for_selector(ad_selector, timeout=15000)
+    try:
+        await page.wait_for_selector(ad_selector, timeout=15000)
+    except Exception:
+        print(f"No ads found for {category} (empty results or selector changed)")
+        return
     ad_elements = await page.query_selector_all(ad_selector)
 
     for ad in ad_elements:
